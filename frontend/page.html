@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <center><h1>Teleoperation Zumo Command Center</h1></center>
+
+    <div class="keys">
+      <div class="up arr" onclick="action('MOVEF')">↑</div>
+      <br />
+      <div class="left arr" onclick="action('TURNL')">←</div>
+      <div class="down arr" onclick="action('MOVEB')">↓</div>
+      <div class="right arr" onclick="action('TURNR')">→</div>
+    </div>
+    <br />
+
+    <div class="names">
+      <div class="uptext"></div>
+      <div class="downtext"></div>
+      <div class="lefttext"></div>
+      <div class="righttext"></div>
+      <div class="b"></div>
+      <div class="a"></div>
+    </div>
+    <center>
+      <button
+        type="button"
+        class="btn btn-success"
+        id="accelerate"
+        onclick="action('FASTR')"
+      >
+        Accelerate
+      </button>
+      <button
+        type="button"
+        class="btn btn-warning"
+        id="brake"
+        onclick="action('SLOWR')"
+      >
+        Slow Down
+      </button>
+      <button
+        type="button"
+        class="btn btn-danger"
+        id="stop"
+        onclick="action('STOPN')"
+      >
+        Stop
+      </button>
+    </center>
+    <br />
+    <h2>
+      <center>Obstacle Range Readings in cm</center>
+    </h2>
+    <canvas id="canvas"></canvas>
+    <center>
+      <div id="statusIndicator">
+        <p id="connecting">Connecting to rosbridge...</p>
+        <p id="connected" style="color: #00d600; display: none">
+          Connected to Robot Operating System
+        </p>
+        <p id="error" style="color: #ff0000; display: none">
+          Error in the backend!
+        </p>
+        <p id="closed" style="display: none">Connection closed.</p>
+      </div>
+      <span id="last_message"></span>
+    </center>
+
+    <link
+      href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+      rel="stylesheet"
+    />
+  </body>
+  <script type="text/javascript" src="roslib.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+  <script type="text/javascript" src="interface.js" defer></script>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+    crossorigin="anonymous"
+  />
+</html>

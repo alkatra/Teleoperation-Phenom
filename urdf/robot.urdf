@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<robot name="my_robot">
+
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="5 7.5 6"/>
+      </geometry>
+      <material name="Cyan">
+        <color rgba="0 1.0 1.0 1.0"/>
+      </material>
+    </visual>
+  </link>
+  <joint name="base_to_ultrasonic_center" type="fixed">
+  <parent link="base_link"/>
+  <child link="ultrasonic_center"/>
+  <origin xyz="0.1 0 3" rpy="0 0 0"/>
+</joint>
+
+<link name="ultrasonic_center"/>
+
+</robot>
