@@ -10,5 +10,3 @@ Key Components:
 5. **Frontend Folder (Web-based GUI)**: A web application built using ROSLib that communicates with the Bridge node. The GUI allows for Zumo robot control via graphical arrow keys, speed adjustment, and live display of sensor readings in a bar graph format.
 
 The project provides a holistic teleoperation system from the physical robot with sensor integration, data processing in ROS, visualization in Rviz, to intuitive web-based user control interface.
-
-*Note: You must have ROS and Arduino installed to use this project. Check the "Installation" section of the documentation for more information on setting up and running the project.*
